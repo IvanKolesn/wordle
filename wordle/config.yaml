@@ -1,0 +1,17 @@
+default_language: ru
+
+game:
+  word_length: 5
+  max_steps: 6
+
+languages:
+  ru:
+    alphabet: "абвгдеёжзийклмнопрстуфхцчшщъыьэюя"
+    corpus_url: "https://raw.githubusercontent.com/Harrix/Russian-Nouns/main/dist/russian_nouns.txt"
+    corpus_file: "corpus/russian.txt"
+    first_guess: "отвар"
+  en:
+    alphabet: "abcdefghijklmnopqrstuvwxyz"
+    corpus_url: "https://raw.githubusercontent.com/dwyl/english-words/master/words_alpha.txt"
+    corpus_file: "corpus/english.txt"
+    first_guess: "crane"
