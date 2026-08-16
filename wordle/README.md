@@ -4,14 +4,15 @@ The `wordle` package contains the game logic, solver, terminal interface, and Gy
 
 ## Modules
 
-- `env.py` — Gymnasium-compatible Wordle environment
-- `solver.py` — candidate filtering and guess selection algorithms
-- `game.py` — human and automated game modes
-- `terminal_ui.py` — Rich-based console interface
+- `config.py` — language/game configuration (goes with config.yaml)
 - `corpus.py` — loading and cleaning word lists
-- `config.py` — language/game configuration
-- `main.py` — command-line entry point
-- `__init__.py` — package initializer; exports `WordleEnv`
+- `env.py` — Gymnasium-compatible Wordle environment (for future model development)
+- `game.py` — code for human and automated game modes
+- `main.py` — actual game launcher. Command-line entry point
+- `solver.py` — simple probability based solver.
+- `terminal_ui.py` — console interface for human playing in terminal
+- `web_ui.py` — HTML interface for human playing in browser
+- `__init__.py` — well, you know :)
 
 ## Running
 
@@ -21,6 +22,8 @@ From the project root:
 python -m wordle.main --lang en
 python -m wordle.main --lang ru
 ```
+
+More in main README.md
 
 The default first guesses are `crane` for English and `отвар` for Russian.
 
