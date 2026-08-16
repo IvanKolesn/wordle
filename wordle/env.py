@@ -1,4 +1,5 @@
-"""Gymnasium-compatible Wordle environment for Russian 5-letter words.
+"""
+Gymnasium-compatible Wordle environment for Russian 5-letter words.
 
 Designed to serve two purposes with one implementation:
     1. Backend for interactive play (see ``terminal_ui.py``).
@@ -28,7 +29,7 @@ import numpy as np
 import gymnasium as gym
 from gymnasium import spaces
 
-from . import solver as slv
+from wordle.models import simple_solver as slv
 
 # Feedback encoding used in observations: 0 = cell not yet played.
 FEEDBACK_EMPTY, FEEDBACK_BLACK, FEEDBACK_YELLOW, FEEDBACK_GREEN = 0, 1, 2, 3

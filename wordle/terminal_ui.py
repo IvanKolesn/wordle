@@ -12,8 +12,8 @@ from pathlib import Path
 from rich.console import Console
 from rich.text import Text
 
-from . import corpus
-from .env import (
+from wordle import corpus
+from wordle.env import (
     ALPHABET_EN,
     ALPHABET_RU,
     WordleEnv,
@@ -21,7 +21,7 @@ from .env import (
     FEEDBACK_YELLOW,
     FEEDBACK_GREEN,
 )
-from . import solver as slv
+from wordle.models import simple_solver as slv
 
 _STYLE = {
     FEEDBACK_GREEN: "bold black on green",

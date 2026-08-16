@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from . import solver as slv
+from wordle.models import simple_solver as slv
 
 
 class AutomatedGame:

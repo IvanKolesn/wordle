@@ -8,7 +8,8 @@ from pathlib import Path
 
 from flask import Flask, jsonify, request, render_template_string
 
-from . import corpus, solver as slv
+from wordle import corpus
+from wordle.models import simple_solver as slv
 from .env import ALPHABET_EN, ALPHABET_RU, WordleEnv
 
 

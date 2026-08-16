@@ -5,8 +5,8 @@ from __future__ import annotations
 import argparse
 from pathlib import Path
 
-from . import corpus, game
-from .web_ui import play as play_web
+from wordle import corpus, game
+from wordle.web_ui import play as play_web
 
 BASE_DIR = Path(__file__).resolve().parent
 CORPORA = {

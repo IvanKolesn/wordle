@@ -2,6 +2,11 @@
 
 The `wordle` package contains the game logic, solver, terminal interface, and Gymnasium environment.
 
+## Sub folders:
+
+- models - automated models capable of playing the game
+- corpus - words that can be played
+
 ## Modules
 
 - `config.py` — language/game configuration (goes with config.yaml)
@@ -9,7 +14,6 @@ The `wordle` package contains the game logic, solver, terminal interface, and Gy
 - `env.py` — Gymnasium-compatible Wordle environment (for future model development)
 - `game.py` — code for human and automated game modes
 - `main.py` — actual game launcher. Command-line entry point
-- `solver.py` — simple probability based solver.
 - `terminal_ui.py` — console interface for human playing in terminal
 - `web_ui.py` — HTML interface for human playing in browser
 - `__init__.py` — well, you know :)
