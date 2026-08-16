@@ -3,7 +3,7 @@
 A Python implementation of Wordle with:
 
 - interactive terminal game
-- heuristic solver
+- probabilistic solver
 - Gymnasium environment for reinforcement learning experiments
 - English and Russian corpora support
 - correct handling of repeated letters in Wordle feedback
