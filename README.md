@@ -31,34 +31,25 @@ python -m wordle.main --lang en
 python -m wordle.main --lang ru
 ```
 
-The default first guesses are:
+Select game mode with `--test` (test model or play yourself): 
 
-- English: `crane`
-- Russian: `отвар`
-
-You can also specify the number of automated games with `--games`.
+```bash
+python -m wordle.main --mode test
+python -m wordle.main --mode human
+```
 
 ## Project structure
 
-- `wordle/` — application package
-- `wordle/corpus/` — English and Russian word lists
-- `wordle/main.py` — command-line entry point
-- `wordle/game.py` — human and automated game modes
-- `wordle/solver.py` — candidate filtering and guess selection
-- `wordle/env.py` — Gymnasium-compatible environment
-- `wordle/terminal_ui.py` — Rich-based console interface
-- `wordle/corpus.py` — word-list loading and cleaning
-- `wordle/config.py` — language and game configuration
-- `wordle/config.yaml` — default configuration
-- `wordle/__init__.py` — package initializer and public package exports
+Can be found in README in main folder
 
-## Development notes
+## Game rules
 
-The project uses package-relative imports and should be run with `python -m wordle.main` from the project root. The package initializer (`wordle/__init__.py`) exposes `WordleEnv` as the main public environment class.
+Standard NYT wordle rules: https://www.nytimes.com/2023/08/01/crosswords/how-to-talk-about-wordle.html
 
-The Wordle feedback implementation correctly handles repeated letters: a letter is marked yellow only when an unmatched occurrence remains in the target word. Candidate filtering uses the same feedback logic.
+## Future plans:
 
-The Python source files have been compilation-checked for syntax/import issues. The full Gymnasium environment was not executed in the development sandbox because its external dependencies could not be installed there; install `requirements.txt` before running the environment locally.
+1. Train RL model (Q-learner, DQN, etc)
+2. Expand game to 4 and 6 letter versions
 
 ## Extending the project
 
